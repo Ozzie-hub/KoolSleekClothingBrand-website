@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />  
+    <title>KoolSleek</title>
+    
+</head>
+<body>  
+    
+    <!--Navigation Bar-->
+    <nav>
+        <div class="brand-container">
+            <!-- <img src="images/KoolSleek Logo 2.jpg" width="33px"/> -->
+            <div class="KoolSleekHTML">
+            <a href="index.html">KoolSleek</a>
+            </div>
+        </div>
+
+        <!--search bar-->
+        <form>
+            <div class="search">            
+                <input class="search-input" type="search" placeholder="Search">
+                <span class="search-icon material-symbols-outlined">search</span>
+            </div>
+    
+        </form>
+        </div>
+        <!--UL para sa navbar-->
+        <ul class="list-container">
+                       
+            <li class="dropdown">
+                <a href="#">Shop ▾</a>
+                <ul class="dropdown-content">
+                    <a href="#tops">Tops</a>
+                    <a href="#pants">Pants</a>
+                    <a href="#hoodies-sweatshirts">Hoodies & Sweatshirts</a>
+                    <a href="#shorts">Shorts</a>
+                    <a href="#jackets">Jackets</a>
+                    <a href="#accessories">Accessories</a>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>  
+            <li><a href="faqs.html">FAQS</a></li>
+ 
+        </ul>
+        
+    </nav>
+
+    <!--KOOLSLEEK TEXT AS HOME PAGE-->
+    
+    <section class="koolsleek_container">
+        <div class="KoolSleek h1">
+            <h1>KoolSleek</h1>
+        </div>
+    </section>
+    
+    
+    <!--Wala animation lang para sa koolsleek text (js)-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+    
+
+        <!-- //Shop Section -->
+
+        <!-- //Tops Section-->
+
+        <section class="tops" id="tops">
+
+            <h2 class="heading1">Tops</h2>
+
+                <div class="gallery-wrap">
+                    <img src="images/backarrow1.png" id="backBtn" />
+
+                <div class="tops-content">
+                        <div>
+                            <span><img src="images/koolsleekaly1.jpg" /></span>
+                            <span><img src="images/koolsleekowen.jpg" /></span>
+                            <span><img src="images/koolsleekaly3.jpg" /></span>
+                        </div>
+                        <div>
+                            <span><img src="images/koolsleekaly4.jpg" /></span>
+                            <span><img src="images/koolsleekaly2.jpg" /></span>
+                            <span><img src="images/koolsleekaly5.jpg" /></span>
+                        </div>
+                </div>
+                
+                    <img src="images/nextarrow1.png" id="nextBtn" />
+
+                </div>
+        </section>
+        <script>
+            let scrollContainer = document.querySelector(".tops-content");
+            let backBtn = document.getElementById("backBtn");
+            let nextBtn = document.getElementById("nextBtn");
+            scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+            });
+            nextBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 900;
+            });
+            backBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 900;
+            });
+        </script>  
+
+        <!--Pants Section-->
+
+        <section class="pants" id="pants">
+
+            <h2 class="heading2">Pants</h2>
+
+                <div class="gallery-wrap">
+                    <img src="images/backarrow1.png" id="backBtn2" />
+
+                <div class="pants-content">
+                        <div>
+                            <span><img src="images/koolsleekaly1.jpg" /></span>
+                            <span><img src="images/koolsleekowen.jpg" /></span>
+                            <span><img src="images/koolsleekaly3.jpg" /></span>
+                        </div>
+                        <div>
+                            <span><img src="images/koolsleekaly4.jpg" /></span>
+                            <span><img src="images/koolsleekaly2.jpg" /></span>
+                            <span><img src="images/koolsleekaly5.jpg" /></span>
+                        </div>
+                </div>
+                
+                    <img src="images/nextarrow1.png" id="nextBtn2" />
+
+                </div>
+        </section>
+        <script>
+            let scrollContainer2 = document.querySelector(".pants-content");   
+            let backBtn2 = document.getElementById("backBtn2");
+            let nextBtn2 = document.getElementById("nextBtn2");
+            scrollContainer2.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer2.scrollLeft += evt.deltaY;
+            scrollContainer2.style.scrollBehavior = "auto";
+            });
+            nextBtn2.addEventListener("click", () => {
+            scrollContainer2.style.scrollBehavior = "smooth";
+            scrollContainer2.scrollLeft += 900;
+            });
+            backBtn2.addEventListener("click", () => {
+            scrollContainer2.style.scrollBehavior = "smooth";
+            scrollContainer2.scrollLeft -= 900;
+            });
+        </script>  
+
+        <!--Hoodies-Sweatshirts Section-->
+
+        <section class="hoodies-sweatshirts" id="hoodies-sweatshirts">
+
+            <h2 class="heading3">Hoodies and Sweatshirts</h2>
+
+                <div class="gallery-wrap">
+                    <img src="images/backarrow1.png" id="backBtn3" />
+
+                <div class="hoodies-sweatshirts-content">
+                        <div>
+                            <span><img src="images/koolsleekaly1.jpg" /></span>
+                            <span><img src="images/koolsleekowen.jpg" /></span>
+                            <span><img src="images/koolsleekaly3.jpg" /></span>
+                        </div>
+                        <div>
+                            <span><img src="images/koolsleekaly4.jpg" /></span>
+                            <span><img src="images/koolsleekaly2.jpg" /></span>
+                            <span><img src="images/koolsleekaly5.jpg" /></span>
+                        </div>
+                </div>
+                
+                    <img src="images/nextarrow1.png" id="nextBtn3" />
+
+                </div>
+        </section>
+        <script>
+            let scrollContainer3 = document.querySelector(".hoodies-sweatshirts-content");   
+            let backBtn3 = document.getElementById("backBtn3");
+            let nextBtn3 = document.getElementById("nextBtn3");
+            scrollContainer3.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer3.scrollLeft += evt.deltaY;
+            scrollContainer3.style.scrollBehavior = "auto";
+            });
+            nextBtn3.addEventListener("click", () => {
+            scrollContainer3.style.scrollBehavior = "smooth";
+            scrollContainer3.scrollLeft += 900;
+            });
+            backBtn3.addEventListener("click", () => {
+            scrollContainer3.style.scrollBehavior = "smooth";
+            scrollContainer3.scrollLeft -= 900;
+            });
+        </script> 
+
+        <!--Shorts Section-->
+
+        <section class="shorts" id="shorts">
+
+            <h2 class="heading4">Shorts</h2>
+
+                <div class="gallery-wrap">
+                    <img src="images/backarrow1.png" id="backBtn4" />
+
+                <div class="shorts-content">
+                        <div>
+                            <span><img src="images/koolsleekaly1.jpg" /></span>
+                            <span><img src="images/koolsleekowen.jpg" /></span>
+                            <span><img src="images/koolsleekaly3.jpg" /></span>
+                        </div>
+                        <div>
+                            <span><img src="images/koolsleekaly4.jpg" /></span>
+                            <span><img src="images/koolsleekaly2.jpg" /></span>
+                            <span><img src="images/koolsleekaly5.jpg" /></span>
+                        </div>
+                </div>
+                
+                    <img src="images/nextarrow1.png" id="nextBtn4" />
+
+                </div>
+        </section>
+        <script>
+            let scrollContainer4 = document.querySelector(".shorts-content");   
+            let backBtn4 = document.getElementById("backBtn4");
+            let nextBtn4 = document.getElementById("nextBtn4");
+            scrollContainer4.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer4.scrollLeft += evt.deltaY;
+            scrollContainer4.style.scrollBehavior = "auto";
+            });
+            nextBtn4.addEventListener("click", () => {
+            scrollContainer4.style.scrollBehavior = "smooth";
+            scrollContainer4.scrollLeft += 900;
+            });
+            backBtn4.addEventListener("click", () => {
+            scrollContainer4.style.scrollBehavior = "smooth";
+            scrollContainer4.scrollLeft -= 900;
+            });
+        </script> 
+
+        <!--Jackets Section-->
+
+        <section class="jackets" id="jackets">
+
+            <h2 class="heading5">Jackets</h2>
+
+                <div class="gallery-wrap">
+                    <img src="images/backarrow1.png" id="backBtn5" />
+
+                <div class="jackets-content">
+                        <div>
+                            <span><img src="images/koolsleekaly1.jpg" /></span>
+                            <span><img src="images/koolsleekowen.jpg" /></span>
+                            <span><img src="images/koolsleekaly3.jpg" /></span>
+                        </div>
+                        <div>
+                            <span><img src="images/koolsleekaly4.jpg" /></span>
+                            <span><img src="images/koolsleekaly2.jpg" /></span>
+                            <span><img src="images/koolsleekaly5.jpg" /></span>
+                        </div>
+                </div>
+                
+                    <img src="images/nextarrow1.png" id="nextBtn5" />
+
+                </div>
+        </section>
+        <script>
+            let scrollContainer5 = document.querySelector(".jackets-content");   
+            let backBtn5 = document.getElementById("backBtn5");
+            let nextBtn5 = document.getElementById("nextBtn5");
+            scrollContainer5.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer5.scrollLeft += evt.deltaY;
+            scrollContainer5.style.scrollBehavior = "auto";
+            });
+            nextBtn5.addEventListener("click", () => {
+            scrollContainer5.style.scrollBehavior = "smooth";
+            scrollContainer5.scrollLeft += 900;
+            });
+            backBtn5.addEventListener("click", () => {
+            scrollContainer5.style.scrollBehavior = "smooth";
+            scrollContainer5.scrollLeft -= 900;
+            });
+        </script> 
+
+        <!--Accessories Section-->
+
+        <section class="accessories" id="accessories">
+
+            <h2 class="heading6">Accessories</h2>
+
+                <div class="gallery-wrap">
+                    <img src="images/backarrow1.png" id="backBtn6" />
+
+                <div class="hoodies-sweatshirts-content">
+                        <div>
+                            <span><img src="images/koolsleekaly1.jpg" /></span>
+                            <span><img src="images/koolsleekowen.jpg" /></span>
+                            <span><img src="images/koolsleekaly3.jpg" /></span>
+                        </div>
+                        <div>
+                            <span><img src="images/koolsleekaly4.jpg" /></span>
+                            <span><img src="images/koolsleekaly2.jpg" /></span>
+                            <span><img src="images/koolsleekaly5.jpg" /></span>
+                        </div>
+                </div>
+                
+                    <img src="images/nextarrow1.png" id="nextBtn6" />
+
+                </div>
+        </section>
+        <script>
+            let scrollContainer6 = document.querySelector(".accessories-content");   
+            let backBtn6 = document.getElementById("backBtn6");
+            let nextBtn6 = document.getElementById("nextBtn6");
+            scrollContainer6.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer6.scrollLeft += evt.deltaY;
+            scrollContainer6.style.scrollBehavior = "auto";
+            });
+            nextBtn6.addEventListener("click", () => {
+            scrollContainer6.style.scrollBehavior = "smooth";
+            scrollContainer6.scrollLeft += 900;
+            });
+            backBtn6.addEventListener("click", () => {
+            scrollContainer6.style.scrollBehavior = "smooth";
+            scrollContainer6.scrollLeft -= 900;
+            });
+        </script> 
+
+</body>
+</html>

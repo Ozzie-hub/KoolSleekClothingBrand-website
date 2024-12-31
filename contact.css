@@ -1,0 +1,287 @@
+@font-face {
+    font-family: "ArialBlack";
+    src: url(fonts/arialblack.ttf);
+  }
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --secondary-bg-color: #000000;
+    --hover-color: #bbb8bd;
+    --accent-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Body Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--secondary-bg-color);
+    
+    color: var(--text-color);
+}
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.3);
+    padding: 10px 25px;  
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+    /*Para sumunod pababa ung navbar*/
+    position: sticky; 
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.KoolSleekHTML a{
+    font-family: ArialBlack;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.KoolSleekHTML:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+.list-container {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+    /*Syntax for to center a text in a container (Same sa KoolSleek H1)*/
+    margin: auto;
+    height: 50vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.list-container li {
+    position: relative;
+}
+
+.list-container a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.list-container a:hover {
+    color: var(--hover-color);
+}
+
+/* Dropdown Menu */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    min-width: 150px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin: 0;
+    float: right;
+    width: 250px; /* Set a width for alignment */
+    transition: box-shadow 0.3s ease;
+    
+    
+}
+
+.search:focus-within {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+}
+
+/* CONTACT US H1 Text Section */
+.Contact-Us_container {
+    height: 90vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Contact Us Text*/
+
+.Contact-Us h1{ 
+    /* border: 10px solid gray; */
+    font-family: Verdana;
+    font-style: normal;
+    font-size: 4rem;
+    color: var(--text-color);
+    
+    /*Syntax to center the text*/
+    height: 60vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 5;
+    margin: auto;
+
+    /*Animation gradient*/
+    background: linear-gradient(to left, #ffffff,#aaaaaa,
+    #858585,#585858,#ffffff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.0s linear infinite;
+}
+
+@keyframes animate-gradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+/*Customer Support Text*/
+
+.Contact-Us h2{
+    
+    /*Syntax to center the text*/
+    height: 75vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 2;
+    margin: auto;
+}
+
+/*Email Text*/
+
+#Email{
+    
+    /*Syntax to center the text*/
+    height: 87vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 3;
+    
+    margin: auto;
+}
+
+/*Facebook Text*/
+
+#Facebook{ 
+    
+    /*Syntax to center the text**/
+
+    height: 92vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 3;
+    
+    margin: auto;
+} 

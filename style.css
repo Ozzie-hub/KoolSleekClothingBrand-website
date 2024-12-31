@@ -1,0 +1,647 @@
+@font-face {
+    font-family: "ArialBlack";
+    src: url(fonts/arialblack.ttf);
+  }
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --secondary-bg-color: #000000;
+    --hover-color: #bbb8bd;
+    --accent-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Body Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--secondary-bg-color);
+    
+    color: var(--text-color);
+}
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.3);
+    padding: 10px 25px;  
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+    /*Para sumunod pababa ung navbar*/
+    position: sticky; 
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.KoolSleekHTML a{
+    font-family: ArialBlack;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.KoolSleekHTML:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+.list-container {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+    /*Syntax for to center a text in a container (Same sa KoolSleek H1)*/
+    margin: auto;
+    height: 50vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.list-container li {
+    position: relative;
+}
+
+.list-container a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.list-container a:hover {
+    color: var(--hover-color);
+}
+
+/* Dropdown Menu */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    min-width: 150px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin: 0;
+    float: right;
+    width: 250px; /* Set a width for alignment */
+    transition: box-shadow 0.3s ease;
+    
+    
+}
+
+.search:focus-within {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+}
+
+/* KoolSleek H1 Text Section */
+.koolsleek_container {
+    height: 90vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.KoolSleek h1 {
+    /* border: 10px solid gray; */
+    font-family: ArialBlack;
+    font-style: italic;
+    font-size: 4rem;
+    color: var(--text-color);
+    
+    /*Syntax to center the text h1*/
+    height: 50vh;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    /*Animation gradient*/
+    background: linear-gradient(to left, #ffffff,#aaaaaa,
+    #858585,#585858,#ffffff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.0s linear infinite;
+}
+
+@keyframes animate-gradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+
+/* Tops Section */
+
+.tops {
+    background: var(--secondary-bg-color);
+    padding: 50px;
+    position: relative; /* For positioning the buttons */
+}
+
+.heading1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
+    position: relative;
+
+}
+
+.tops-content {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.tops-content div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.tops-content div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.tops-content::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+
+}
+
+.tops-content div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Pants Section */
+
+.pants {
+    background: var(--secondary-bg-color);
+    padding: 50px;
+    position: relative; /* For positioning the buttons */
+}
+
+.heading2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
+    position: relative;
+
+}
+
+.pants-content {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.pants-content div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.pants-content div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.pants-content::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+
+}
+
+.pants-content div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Hoodies-Sweatshirts Section*/
+
+.hoodies-sweatshirts {
+    background: var(--secondary-bg-color);
+    padding: 50px;
+    position: relative; /* For positioning the buttons */
+}
+
+.heading3 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
+    position: relative;
+
+}
+
+.hoodies-sweatshirts-content {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.hoodies-sweatshirts-content div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.hoodies-sweatshirts-content div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.hoodies-sweatshirts-content::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+
+}
+
+.hoodies-sweatshirts-content div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*Shortss Section*/
+
+.shorts {
+    background: var(--secondary-bg-color);
+    padding: 50px;
+    position: relative; /* For positioning the buttons */
+}
+
+.heading4 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
+    position: relative;
+
+}
+
+.shorts-content {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.shorts-content div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.shorts-content div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.shorts-content::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+
+}
+
+.shorts-content div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*Jackets Section*/
+
+.jackets {
+    background: var(--secondary-bg-color);
+    padding: 50px;
+    position: relative; /* For positioning the buttons */
+}
+
+.heading5 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
+    position: relative;
+
+}
+
+.jackets-content {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.jackets-content div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.jackets-content div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.jackets-content::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+
+}
+
+.jackets-content div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*Accessories Section*/
+
+.accessories {
+    background: var(--secondary-bg-color);
+    padding: 50px;
+    position: relative; /* For positioning the buttons */
+}
+
+.heading6 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
+    position: relative;
+
+}
+
+.accessories-content {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.accessories-content div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.accessories-content div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.accessories-content::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+
+}
+
+.accessories-content div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* All Arrows from shop to accessories */
+
+#backBtn, #nextBtn,
+#backBtn2, #nextBtn2,
+#backBtn3, #nextBtn3, 
+#backBtn4, #nextBtn4, 
+#backBtn5, #nextBtn5, 
+#backBtn6, #nextBtn6 {
+
+    width: 50%;
+    cursor: pointer;
+    margin: 40px;
+}
+
+#backBtn,
+#backBtn2,
+#backBtn3, 
+#backBtn4, 
+#backBtn5, 
+#backBtn6 {
+
+    left: 20px; /* Position it on the left */
+}
+
+#nextBtn,
+#nextBtn2,
+#nextBtn3, 
+#backBtn4, 
+#backBtn5, 
+#backBtn6 {
+
+    right: 20px; /* Position it on the right */
+}
+
+#backBtn:hover, #nextBtn:hover, 
+#backBtn2:hover, #nextBtn2:hover, 
+#backBtn3:hover, #nextBtn3:hover, 
+#backBtn4:hover, #nextBtn4:hover,
+#backBtn5:hover, #nextBtn5:hover,
+#backBtn6:hover, #nextBtn6:hover {
+
+    transform: scale(1.1);
+}
+
+/* Optional: Style the arrows */
+#backBtn, #nextBtn, 
+#backBtn2, #nextBtn2,
+#backBtn3, #nextBtn3, 
+#backBtn4, #nextBtn4, 
+#backBtn5, #nextBtn5, 
+#backBtn6, #nextBtn6 {
+
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Responsive Design*/
+
+/*Pag ni-resize yung window tab lumiliit yung font size*/
+/*Max-Width will target below of its value, Min-Width is opposite it will target above of its value*/
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 100%
+    }
+}
+
+/*Pag ni-resize yung window tab mawawala and lumiliit ung font yung list sa nav*/
+
+@media (max-width:800px){
+
+    .list-container{
+        display: none;
+    }
+}
+
